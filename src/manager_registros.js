@@ -4,17 +4,17 @@ function loadTable(){
     .then(response => {
         var resultado = JSON.parse(JSON.stringify(response.data));
         $('#tabla_participantes').DataTable({
-            "order": [[1, "asc"]], // Ordenar por Cédula o el índice que prefieras
+            "order": [[1, "asc"]], 
             "processing": true,
             "scrollX": true,
-            "data": resultado,     // Pasamos el array de objetos directamente
+            "data": resultado,     
             "columns": [
-                { "data": "compania" }, // Mapea la propiedad 'compania' del JSON
-                { "data": "cedula"   }, // Mapea 'cedula'
-                { "data": "titulo"   }, // Mapea 'titulo'
-                { "data": "nombre"   }, // Mapea 'nombre'
-                { "data": "correo"   }, // Mapea 'correo'
-                { "data": "telefono" }  // Mapea 'telefono'
+                { "data": "compania" }, 
+                { "data": "cedula"   }, 
+                { "data": "titulo"   }, 
+                { "data": "nombre"   }, 
+                { "data": "correo"   }, 
+                { "data": "telefono" }  
             ],
             "language": {
                 "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json" // Opcional: Traducir a español
@@ -27,3 +27,4 @@ function loadTable(){
 $(document).ready(function() {
     loadTable();
 });
+
