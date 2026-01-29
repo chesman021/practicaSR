@@ -24,7 +24,6 @@ $(document).ready(function() {
             const config = patronesValidacion[tipoRegex];
 
             if (config && config.filtro) {
-                // Aplicar filtro para eliminar caracteres no permitidos
                 const valorOriginal = $campo.val();
                 const valorFiltrado = valorOriginal.replace(config.filtro, '');
 
@@ -39,7 +38,6 @@ $(document).ready(function() {
                 }
             }
 
-            // Para teléfono, limitar a 10 dígitos
             if (tipoRegex === 'telefono') {
                 if ($campo.val().length > 10) {
                     $campo.val($campo.val().substring(0, 10));
